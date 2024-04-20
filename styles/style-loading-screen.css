@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  height: 100vh; /* Cover entire viewport */
+  /* overflow: hidden; Hide overflowing content */
+}
+.rectangle {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-color: var(--palette_noir);
+  z-index: 9999; /* Ensures rectangles are on top of everything */
+}
+.rect1 {
+  left: 0;
+}
+.rect2 {
+  left: 25%;
+}
+.rect3 {
+  left: 50%;
+}
+.rect4 {
+  left: 75%;
+}
+.content {
+  opacity: 0; /* Initially hide content */
+  z-index: 9997; /* Place content below rectangles */
+}

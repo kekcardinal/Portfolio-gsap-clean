@@ -1,11 +1,30 @@
-<link rel="stylesheet" href="styles/style.css">
-<script src="assets/js/gsap.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+ <!DOCTYPE html>
+<html lang="en"> 
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/SplitText.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Félix Boutin-Cousineau, développeur web Front-end">
+  <meta name="author" content="Felix Boutin-Cousineau">
+  <link rel="shortcut icon" type="image/jpg" href="assets/img/bat.png" />
+  <title>Portfolio | Félix Boutin-Cousineau</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" ></script>
+  <script src="assets/js/gsap-hero.js" defer></script>
+  <script src="assets/js/gsap-loading.js" defer></script>
+  <script src="assets/js/gsap-navbar.js" defer></script>
+  <script src="assets/js/heure.js"></script>
+  <script src="assets/js/meteo.js"></script>
+</head>
+
+
+
+
 <body>
+
 <div class="loading-screen">
   <div class="rectangle rect1"></div>
   <div class="rectangle rect2"></div>
@@ -14,7 +33,10 @@
 </div>
 
 <nav class="navbar"><div class="btn" id="startBtn">
-  <div class="bar"></div><div class="second_bar bar"></div><div class="bar"></div></nav>
+  <div class="bar"></div>
+  <div class="second_bar bar"></div>
+  <div class="bar"></div>
+</nav>
 
 <ul  id="menuList" class="navbar-links">
   <li class="choix"><div>Dark</div><div >Light</div></li>
@@ -28,11 +50,19 @@
 <main class="content">
   <section class="section_hero">
     <div class="conteneur_hero">
-      <img class="hero" src="assets/img/a1.jpg" alt="Hero Image"></img>
+      <img class="hero" src="assets/img/a3.jpg" alt="Hero Image"></img>
+      <div class="heure_meteo_disponibilite">
+        <p id="heure"></p>
+        <p class="temperature"></p>
+        <!-- <img class="icone_meteo" src="https://meteo.gc.ca/weathericons/01.gif"
+          alt="icone meteo"> -->
+      </div>
+      <div class="disponibilite">
+        <p>Disponible </p><span class="triangle_disponibilite"></span>
+      </div>
       <div class="hero_texte">
         <p>Félix Boutin-Cousineau</p>
         <p>Front-end Developer</p>
-        <p>Montréal|Québec|Canada</p>
       </div>
     </div>
   </section>
