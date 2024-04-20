@@ -11,7 +11,7 @@
 .bar {
   height: 1px;
   width: 100%;
-  background-color: grey;
+  background-color: white;
 }
 nav {
   transform: translateY(100%);
@@ -24,7 +24,7 @@ nav {
   background: rgba(0, 0, 0, 0.19);
   /* border-top-left-radius: 16px;
   border-top-right-radius:16px; */
-  background-color: #ffffff;
+  background-color: rgb(177, 177, 177);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +43,7 @@ ul {
 
 li {
   /* From https://css.glass */
-  background-color: #ffffff;
+  background-color: rgb(177, 177, 177);
   /* border: 1px solid rgba(0, 0, 0, 0.31); */
   display: flex;
   align-items: center;
@@ -51,4 +51,34 @@ li {
   flex: 1;
   width: 100%;
   transform: translateX(-100%);
+  color: #ffffff;
+  /* padding: 15px; */
+}
+
+.navbar_numero {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: "Space mono";
+}
+
+.navbar_section {
+  padding-left: 50px;
+  height: 100%;
+  flex: 5;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: 50px;
+  font-family: "Space mono";
+}
+
+.choix {
+  background-color: darkslategrey;
+  font-size: 50px;
+  font-family: "Space mono";
+  justify-content: space-around;
 }
