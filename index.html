@@ -5,30 +5,26 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/SplitText.min.js"></script>
-<div class="container">
+<body>
+<div class="loading-screen">
   <div class="rectangle rect1"></div>
   <div class="rectangle rect2"></div>
   <div class="rectangle rect3"></div>
   <div class="rectangle rect4"></div>
 </div>
 
-<nav class="navbar">
-  <div class="navbar-toggle" onclick="toggleNavbar()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-</nav>
-<ul class="navbar-links">
-  <li class="navbar-item"><div><a href="#">EN</a><a href="#">FR</a></div></li>
-  <li class="navbar-item"><a href="#">Home</a></li>
-  <li class="navbar-item"><a href="#">About</a></li>
-  <li class="navbar-item"><a href="#">Skills</a></li>
-  <li class="navbar-item"><a href="#">Projects</a></li>
-  <li class="navbar-item"><a href="#">Contact</a></li>
-</ul>
+<nav class="navbar"><div class="btn" id="startBtn">
+  <div class="bar"></div><div class="second_bar bar"></div><div class="bar"></div></nav>
 
-<div class="content">
+<ul  id="menuList" class="navbar-links">
+  <li><div><a href="#">EN</a><a href="#">FR</a></div></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Skills</a></li>
+  <li><a href="#">Projects</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+<main class="content">
   <section class="section_hero">
     <div class="conteneur_hero">
       <img class="hero" src="assets/img/a1.jpg" alt="Hero Image"></img>
@@ -42,4 +38,5 @@
   <section class="a_propos">
     <p>Lorem ipsum...</p>
   </section>
-</div>
+</main>
+</body>

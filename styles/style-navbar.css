@@ -1,71 +1,54 @@
-.navbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9998;;
-    border-top-style:solid;
-    border-top-width:1px;
-    border-top-color:grey;
-  }
-  
-  .navbar-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position:absolute;
-  }
-  
-  .bar {
-    width: 100%;
-    height: 2px;
-    border-radius:50px;
-    background-color:grey;
-  }
-  
-  .navbar-links {
-    position:fixed;
-    display: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    z-index:15000;
-  }
-  
-  .navbar-links li {
-    display: block;
-    height:100%;
-    width:100%;
-    background-color: #ffffff;
-  }
-  
-  .navbar-links li a {
-    display: flex;
-    
-    flex:1;
-    padding: 10px;
-    font-size:90px;
-    color:grey;
-    background-color:#ffffff;
-    text-decoration: none;
-  }
-  
-  /* Show navbar links when toggled */
-  .navbar-links.show {
-    display: flex;
-    flex-direction:column;
-    align-items:center;
+.btn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.bar {
+  height: 1px;
+  width: 100%;
+  background-color: grey;
+}
+nav {
+  transform: translateY(100%);
+  z-index: 15000;
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.19);
+  /* border-top-left-radius: 16px;
+  border-top-right-radius:16px; */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  z-index: 15000;
+  position: fixed;
+  /*   background-color:blue; */
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-    width:100%;
-    height:calc(100vh - 50px);
-    justify-content:space-between;
-  }
-  
+li {
+  /* From https://css.glass */
+  background-color: #ffffff;
+  /* border: 1px solid rgba(0, 0, 0, 0.31); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  transform: translateX(-100%);
+}
