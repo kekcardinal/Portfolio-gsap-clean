@@ -32,6 +32,14 @@
   --espacement_texte: 10px;
 }
 
+html[lang="en"] [lang="fr"] {
+  display: none !important;
+}
+
+html[lang="fr"] [lang="en"] {
+  display: none !important;
+}
+
 body,
 html {
   margin: 0;
@@ -40,6 +48,24 @@ html {
   box-sizing: border-box;
 }
 
+.marquee-content {
+  background-color: #642d59;
+}
+.section_titre {
+  /* width: 100%; */
+  font-size: 70px;
+
+  width: fit-content;
+  white-space: nowrap;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  /* white-space: nowrap; */
+  /* align-items: center;
+  justify-content: center; */
+
+  font-family: "Space Mono", sans-serif;
+  color: var(--palette_blanc);
+}
 * {
   margin: 0;
   padding: 0;

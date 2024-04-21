@@ -28,12 +28,12 @@ nav {
   align-items: center;
   justify-content: center;
 }
-ul {
+.navbar-links {
+  display: none;
   z-index: 15000;
   position: fixed;
   /*   background-color:blue; */
   height: calc(100vh - 50px);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -80,4 +80,8 @@ li {
   font-size: 50px;
   font-family: "Space mono";
   justify-content: space-around;
+}
+
+.langue_active {
+  text-decoration: underline;
 }
