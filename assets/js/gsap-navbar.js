@@ -51,6 +51,7 @@ startBtn.addEventListener("click", () => {
   let actif = document.querySelector(".navbar");
   actif.classList.add("navbar_active");
   if (clickCount === 1) {
+    menuList.style.display = "flex";
     currentX = 0;
     const tl = gsap.timeline(); // Create a GSAP timeline
 
@@ -85,6 +86,7 @@ startBtn.addEventListener("click", () => {
           duration: 0,
           ease: "power2.inOut",
           onComplete: () => {
+            menuList.style.display = "none";
             currentX = 0;
             clickCount = 0;
             // Reset the transformations on the bars

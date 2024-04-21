@@ -1,3 +1,10 @@
+gsap.to(".triangle_disponibilite", {
+  rotation: 360,
+  duration: 2,
+  repeat: -1,
+  ease: "none",
+});
+
 gsap.from(".hero", {
   scale: 1.2, // Zoom in to 20% larger than original size
   opacity: 1, // Fade in
@@ -10,8 +17,12 @@ gsap.from(".hero", {
 
 // Hide the text initially using display: none
 const textContainers = document.querySelectorAll(
-  ".hero_texte p, .heure_meteo_disponibilite p, .disponibilite p, .triangle_disponibilite"
+  ".hero_texte p, .heure_meteo_disponibilite p, .disponibilite p"
 );
+
+const svg_triangle = document.querySelector(".triangle_disponibilite");
+
+svg_triangle.style.display = "none";
 textContainers.forEach((container) => {
   container.style.display = "none";
 });
@@ -34,6 +45,8 @@ function startAnimation() {
 
 function animateText() {
   // Change display to 'block' to reveal the text
+  svg_triangle.style.display = "block";
+
   textContainers.forEach((container) => {
     container.style.display = "block";
   });
@@ -54,7 +67,7 @@ function animateText() {
 
   // GSAP animation
   const spansToAnimate = document.querySelectorAll(
-    ".hero_texte span, .heure_meteo_disponibilite span, .disponibilite span, triangle_disponibilite"
+    ".hero_texte span, .heure_meteo_disponibilite span, .disponibilite span, .disponibilite svg"
   );
   spansToAnimate.forEach((span, index) => {
     gsap.from(span, {
