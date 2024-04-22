@@ -78,9 +78,13 @@ function animateText() {
     });
   });
 }
-// Calculate the height of the bottom bar on mobile devices
-const bottomBarHeight =
-  window.innerHeight - document.documentElement.clientHeight;
+// Get the height of the bottom bar using CSS
+const bottomBarHeight = parseInt(
+  getComputedStyle(document.documentElement).getPropertyValue(
+    "--bottom-bar-height"
+  ),
+  10
+);
 
 // Update the content of the debugging element
 const debugElement = document.getElementById("bottomBarHeightDebug");
