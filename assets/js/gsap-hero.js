@@ -82,17 +82,17 @@ function animateText() {
 const bottomBarHeight =
   window.innerHeight - document.documentElement.clientHeight;
 
-// Calculate the y value for the GSAP animation
-let yValue;
+// Calculate the adjusted y value in pixels
+let yValuePx;
 if (bottomBarHeight > 0) {
-  yValue = `calc(100% - ${bottomBarHeight}px)`; // Subtract the bottom bar height
+  yValuePx = window.innerHeight - bottomBarHeight; // Subtract the bottom bar height from window height
 } else {
-  yValue = "100%"; // Use a steady 100% if bottomBarHeight is 0
+  yValuePx = window.innerHeight; // Use window height if bottomBarHeight is 0
 }
 
 // Apply the GSAP animation
 gsap.to(".hero", {
-  y: yValue, // Adjusted y value based on the condition
+  y: yValuePx, // Adjusted y value in pixels
   ease: "none",
   scrollTrigger: {
     trigger: ".a_propos",
