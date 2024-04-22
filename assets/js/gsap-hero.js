@@ -82,6 +82,12 @@ function animateText() {
 const bottomBarHeight =
   window.innerHeight - document.documentElement.clientHeight;
 
+// Update the content of the debugging element
+const debugElement = document.getElementById("bottomBarHeightDebug");
+if (debugElement) {
+  debugElement.textContent = `Bottom Bar Height: ${bottomBarHeight}px`;
+}
+
 // Calculate the adjusted y value in pixels
 let yValuePx;
 if (bottomBarHeight > 0) {
