@@ -88,7 +88,7 @@ const viewportHeight = window.visualViewport.height;
 let bottomBarHeight = windowHeight - viewportHeight;
 
 // Round the bottomBarHeight value to ensure it's a whole number
-bottomBarHeight = Math.round(bottomBarHeight);
+bottomBarHeight = 50;
 
 // Update the content of the debugging element
 const debugElement = document.getElementById("bottomBarHeightDebug");
