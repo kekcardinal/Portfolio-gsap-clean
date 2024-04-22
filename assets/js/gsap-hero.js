@@ -78,13 +78,21 @@ function animateText() {
     });
   });
 }
-// Get the height of the bottom bar on mobile devices
+// Calculate the height of the bottom bar on mobile devices
 const bottomBarHeight =
   window.innerHeight - document.documentElement.clientHeight;
 
-// Move the text up as the user scrolls down, excluding the bottom bar height
+// Calculate the y value for the GSAP animation
+let yValue;
+if (bottomBarHeight > 0) {
+  yValue = `calc(100% - ${bottomBarHeight}px)`; // Subtract the bottom bar height
+} else {
+  yValue = "100%"; // Use a steady 100% if bottomBarHeight is 0
+}
+
+// Apply the GSAP animation
 gsap.to(".hero", {
-  y: `calc(100% - ${bottomBarHeight}px)`, // Adjust the distance to move up
+  y: yValue, // Adjusted y value based on the condition
   ease: "none",
   scrollTrigger: {
     trigger: ".a_propos",
