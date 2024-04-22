@@ -78,13 +78,14 @@ function animateText() {
     });
   });
 }
-// Get the height of the bottom bar using CSS
-const bottomBarHeight = parseInt(
-  getComputedStyle(document.documentElement).getPropertyValue(
-    "--bottom-bar-height"
-  ),
-  10
-);
+// Get the window's inner height
+const windowHeight = window.innerHeight;
+
+// Get the viewport height
+const viewportHeight = window.visualViewport.height;
+
+// Calculate the height of the bottom browser bar
+const bottomBarHeight = windowHeight - viewportHeight;
 
 // Update the content of the debugging element
 const debugElement = document.getElementById("bottomBarHeightDebug");
@@ -95,9 +96,9 @@ if (debugElement) {
 // Calculate the adjusted y value in pixels
 let yValuePx;
 if (bottomBarHeight > 0) {
-  yValuePx = window.innerHeight - bottomBarHeight; // Subtract the bottom bar height from window height
+  yValuePx = windowHeight - bottomBarHeight; // Subtract the bottom bar height from window height
 } else {
-  yValuePx = window.innerHeight; // Use window height if bottomBarHeight is 0
+  yValuePx = windowHeight; // Use window height if bottomBarHeight is 0
 }
 
 // Apply the GSAP animation
