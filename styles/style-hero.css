@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   object-fit: cover;
   filter: brightness(55%);
 }
@@ -101,12 +101,5 @@
     color: var(--palette_blanc);
     font-size: 22px;
     opacity: 0;
-  }
-
-  .hero {
-    width: 100%;
-    height: calc(100vh - 60px);
-    object-fit: cover;
-    filter: brightness(55%);
   }
 }
