@@ -85,7 +85,10 @@ const windowHeight = window.innerHeight;
 const viewportHeight = window.visualViewport.height;
 
 // Calculate the height of the bottom browser bar
-const bottomBarHeight = windowHeight - viewportHeight;
+let bottomBarHeight = windowHeight - viewportHeight;
+
+// Round the bottomBarHeight value to ensure it's a whole number
+bottomBarHeight = Math.round(bottomBarHeight);
 
 // Update the content of the debugging element
 const debugElement = document.getElementById("bottomBarHeightDebug");
