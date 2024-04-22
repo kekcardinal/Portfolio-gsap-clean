@@ -85,3 +85,11 @@ li {
 .langue_active {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 720px) {
+  .navbar_section,
+  .navbar_numero,
+  .choix {
+    font-size: 25px;
+  }
+}

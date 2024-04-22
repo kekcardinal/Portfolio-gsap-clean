@@ -68,3 +68,38 @@
   width: 15px;
   margin: 5px;
 }
+
+@media screen and (max-width: 720px) {
+  .heure_meteo_disponibilite,
+  .disponibilite,
+  .hero_texte {
+  }
+  .heure_meteo_disponibilite {
+  }
+  .disponibilite {
+    padding-top: 25px;
+    padding-right: 25px;
+  }
+
+  .heure_meteo_disponibilite {
+    padding-top: 25px;
+    padding-left: 25px;
+  }
+
+  .hero_texte {
+    padding-bottom: 75px;
+    padding-right: 25px;
+  }
+
+  .hero_texte > p,
+  .heure_meteo_disponibilite > p,
+  .disponibilite > p,
+  .triangle_disponibilite {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--palette_blanc);
+    font-size: 22px;
+    opacity: 0;
+  }
+}

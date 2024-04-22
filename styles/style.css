@@ -52,17 +52,9 @@ html {
   background-color: #642d59;
 }
 .section_titre {
-  /* width: 100%; */
   font-size: 70px;
-
   width: fit-content;
   white-space: nowrap;
-  /* display: flex;
-  flex-wrap: nowrap; */
-  /* white-space: nowrap; */
-  /* align-items: center;
-  justify-content: center; */
-
   font-family: "Space Mono", sans-serif;
   color: var(--palette_blanc);
 }
@@ -82,4 +74,10 @@ html {
 
 .hero_texte span {
   display: inline-block;
+}
+
+@media screen and (max-width: 720px) {
+  .section_titre {
+    font-size: 35px;
+  }
 }
