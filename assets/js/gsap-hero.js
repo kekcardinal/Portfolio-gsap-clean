@@ -78,40 +78,13 @@ function animateText() {
     });
   });
 }
-window.addEventListener("load", function () {
-  // Get the window's inner height
-  const windowHeight = window.innerHeight;
 
-  // Get the viewport height
-  const viewportHeight = window.visualViewport.height;
-
-  // Calculate the height of the bottom browser bar
-  let bottomBarHeight = windowHeight - viewportHeight;
-
-  // Round the bottomBarHeight value to ensure it's a whole number
-  bottomBarHeight = Math.round(bottomBarHeight);
-
-  // Update the content of the debugging element
-  const debugElement = document.getElementById("bottomBarHeightDebug");
-  if (debugElement) {
-    debugElement.textContent = `Bottom Bar Height: ${bottomBarHeight}px`;
-  }
-
-  // Calculate the adjusted y value in pixels
-  let yValuePx;
-  if (bottomBarHeight > 0) {
-    yValuePx = windowHeight - bottomBarHeight; // Subtract the bottom bar height from window height
-  } else {
-    yValuePx = windowHeight; // Use window height if bottomBarHeight is 0
-  }
-
-  // Apply the GSAP animation
-  gsap.to(".hero", {
-    y: yValuePx, // Adjusted y value in pixels
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".a_propos",
-      scrub: true,
-    },
-  });
+// Apply the GSAP animation
+gsap.to(".hero", {
+  y: yValuePx, // Adjusted y value in pixels
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".a_propos",
+    scrub: true,
+  },
 });
