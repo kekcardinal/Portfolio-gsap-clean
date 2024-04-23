@@ -81,7 +81,7 @@ function animateText() {
 
 // Apply the GSAP animation
 gsap.to(".hero", {
-  y: yValuePx, // Adjusted y value in pixels
+  y: "100%", // Adjusted y value in pixels
   ease: "none",
   scrollTrigger: {
     trigger: ".a_propos",
