@@ -1,5 +1,5 @@
 // GSAP animation for the marquee
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".marquee-content", {
   x: "-5%", // Move the content to the left by its full width
