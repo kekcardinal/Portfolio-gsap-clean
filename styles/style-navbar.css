@@ -33,7 +33,7 @@ nav {
   z-index: 15000;
   position: fixed;
   /*   background-color:blue; */
-  height: calc(100vh - 50px);
+  height: calc(100dvh - 50px);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
