@@ -3,6 +3,8 @@
   height: 100dvh;
   object-fit: cover;
   filter: brightness(55%);
+  position: relative;
+  z-index: -1;
 }
 .section_hero {
   z-index: 1;
