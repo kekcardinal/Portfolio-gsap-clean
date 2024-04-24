@@ -16,10 +16,10 @@ gsap.to(".marquee-content", {
 });
 
 // ScrollTrigger event listener to pause/resume the marquee animation
-ScrollTrigger.addEventListener("refresh", () => ScrollTrigger.update());
+// ScrollTrigger.addEventListener("refresh", () => ScrollTrigger.update());
 
-ScrollTrigger.addEventListener("scrollEnd", () => {
-  gsap.to(".marquee-content", {
-    paused: window.scrollY > 0, // Pause animation if user has scrolled down
-  });
-});
+// ScrollTrigger.addEventListener("scrollEnd", () => {
+//   gsap.to(".marquee-content", {
+//     paused: window.scrollY > 0, // Pause animation if user has scrolled down
+//   });
+// });
