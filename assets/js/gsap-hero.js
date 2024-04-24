@@ -83,7 +83,8 @@ function animateText() {
 function calculateAdjustedYValue(targetY) {
   const windowHeight = window.innerHeight;
   const bottomBarHeight = windowHeight - document.documentElement.clientHeight;
-  const adjustedY = windowHeight * (parseInt(targetY) / 100) - bottomBarHeight;
+  const adjustedY =
+    windowHeight * (parseInt(targetY) / 100) - bottomBarHeight - 50;
   return `${adjustedY}px`;
 }
 
