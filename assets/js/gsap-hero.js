@@ -81,14 +81,15 @@ function animateText() {
 
 // Function to calculate adjusted y value
 function calculateAdjustedYValue(targetY) {
-  const bottomBarHeight =
-    window.innerHeight - document.documentElement.clientHeight;
-  return targetY - bottomBarHeight;
+  const windowHeight = window.innerHeight;
+  const bottomBarHeight = windowHeight - document.documentElement.clientHeight;
+  const adjustedY = windowHeight * (parseInt(targetY) / 100) - bottomBarHeight;
+  return `${adjustedY}px`;
 }
 
 // Apply the GSAP animation
 gsap.to(".hero", {
-  y: calculateAdjustedYValue("100%"), // Adjusted y value based on bottom bar height
+  y: calculateAdjustedYValue(100), // Adjusted y value based on bottom bar height
   ease: "none",
   scrollTrigger: {
     trigger: ".a_propos",
