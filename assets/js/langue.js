@@ -33,23 +33,4 @@ addEventListener("DOMContentLoaded", (event) => {
       document.documentElement.lang = "en";
     });
   });
-
-  // Function to update CSS variable with bottom bar height
-  function updateBottomBarHeight() {
-    const bottomBarHeight =
-      window.innerHeight - document.documentElement.clientHeight;
-
-    document.documentElement.style.setProperty(
-      "--bottom-bar-height",
-      bottomBarHeight + "px"
-    );
-
-    document.getElementById(
-      "bottom-bar-height"
-    ).textContent = `bottom bar height = ${bottomBarHeight}px`;
-  }
-
-  // Update on load and resize events
-  window.addEventListener("load", updateBottomBarHeight);
-  window.addEventListener("resize", updateBottomBarHeight);
 });
