@@ -99,7 +99,7 @@ function calculateAdjustedYValue(targetY) {
 
 // Apply the GSAP animation
 gsap.to(".hero", {
-  y: calculateAdjustedYValue(100), // Adjusted y value based on bottom bar height
+  y: "100%", // Adjusted y value based on bottom bar height
   ease: "none",
   scrollTrigger: {
     trigger: ".a_propos",
