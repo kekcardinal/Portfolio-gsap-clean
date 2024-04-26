@@ -10,8 +10,8 @@ let heroAnimationTriggered = false; // Flag to track if animation has been trigg
 
 // Check if the animation has already been triggered before running it again
 if (!heroAnimationTriggered) {
-  gsap.from(".hero", {
-    scale: 1.2,
+  gsap.to(".hero", {
+    scale: 1,
     opacity: 1,
     duration: 2,
     delay: 1.5,
@@ -98,11 +98,11 @@ function calculateAdjustedYValue(targetY) {
 }
 
 // Apply the GSAP animation
-// gsap.to(".hero", {
-//   y: calculateAdjustedYValue(100), // Adjusted y value based on bottom bar height
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".a_propos",
-//     scrub: true,
-//   },
-// });
+gsap.to(".hero", {
+  y: calculateAdjustedYValue(100), // Adjusted y value based on bottom bar height
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".a_propos",
+    scrub: true,
+  },
+});

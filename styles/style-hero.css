@@ -5,11 +5,14 @@
   filter: brightness(55%);
   position: relative;
   z-index: -1;
+  transform: scale(1.2);
 }
+
 .section_hero {
   z-index: 1;
   position: relative;
 }
+
 .conteneur_hero {
   position: relative;
 }
@@ -27,9 +30,9 @@
   padding-right: 100px;
 }
 
-.hero_texte > p,
-.heure_meteo_disponibilite > p,
-.disponibilite > p,
+.hero_texte>p,
+.heure_meteo_disponibilite>p,
+.disponibilite>p,
 .triangle_disponibilite {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -72,12 +75,13 @@
 }
 
 @media screen and (max-width: 720px) {
+
   .heure_meteo_disponibilite,
   .disponibilite,
-  .hero_texte {
-  }
-  .heure_meteo_disponibilite {
-  }
+  .hero_texte {}
+
+  .heure_meteo_disponibilite {}
+
   .disponibilite {
     padding-top: 25px;
     padding-right: 25px;
@@ -93,9 +97,9 @@
     padding-right: 25px;
   }
 
-  .hero_texte > p,
-  .heure_meteo_disponibilite > p,
-  .disponibilite > p,
+  .hero_texte>p,
+  .heure_meteo_disponibilite>p,
+  .disponibilite>p,
   .triangle_disponibilite {
     font-family: "Space Mono", monospace;
     font-weight: 400;
