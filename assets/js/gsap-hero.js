@@ -5,9 +5,9 @@ gsap.to(".triangle_disponibilite", {
   ease: "none",
 });
 
-
+let heroAnimationTriggered = false;
 document.addEventListener("DOMContentLoaded", function () {
-  let heroAnimationTriggered = false; // Flag to track if animation has been triggered
+  // Flag to track if animation has been triggered
 
   // Check if the animation has already been triggered before running it again
   if (!heroAnimationTriggered) {
