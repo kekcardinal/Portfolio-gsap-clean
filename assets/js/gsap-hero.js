@@ -11,6 +11,8 @@ gsap.from(".hero", {
   duration: 2,
   delay: 1.5, // Delay after rectangles start disappearing
   ease: "power3.out",
+  repeat: 0, // Do not repeat
+  repeatDelay: 0, // No delay between repeats
 });
 
 // Delay the entire animation for 1.5 seconds
