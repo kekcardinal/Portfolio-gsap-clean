@@ -5,15 +5,22 @@ gsap.to(".triangle_disponibilite", {
   ease: "none",
 });
 
-gsap.from(".hero", {
-  scale: 1.2, // Zoom in to 20% larger than original size
-  opacity: 1, // Fade in
-  duration: 2,
-  delay: 1.5, // Delay after rectangles start disappearing
-  ease: "power3.out",
-  repeat: 0, // Do not repeat
-  repeatDelay: 0, // No delay between repeats
-});
+
+let heroAnimationTriggered = false; // Flag to track if animation has been triggered
+
+// Check if the animation has already been triggered before running it again
+if (!heroAnimationTriggered) {
+  gsap.from(".hero", {
+    scale: 1.2,
+    opacity: 1,
+    duration: 2,
+    delay: 1.5,
+    ease: "power3.out",
+    onStart: () => {
+      heroAnimationTriggered = true; // Set the flag to true when animation starts
+    },
+  });
+}
 
 // Delay the entire animation for 1.5 seconds
 
