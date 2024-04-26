@@ -6,21 +6,24 @@ gsap.to(".triangle_disponibilite", {
 });
 
 
-let heroAnimationTriggered = false; // Flag to track if animation has been triggered
+document.addEventListener("DOMContentLoaded", function () {
+  let heroAnimationTriggered = false; // Flag to track if animation has been triggered
 
-// Check if the animation has already been triggered before running it again
-if (!heroAnimationTriggered) {
-  gsap.to(".hero", {
-    scale: 1,
-    opacity: 1,
-    duration: 2,
-    delay: 1.5,
-    ease: "power3.out",
-    onStart: () => {
-      heroAnimationTriggered = true; // Set the flag to true when animation starts
-    },
-  });
-}
+  // Check if the animation has already been triggered before running it again
+  if (!heroAnimationTriggered) {
+    gsap.to(".hero", {
+      scale: 1,
+      opacity: 1,
+      duration: 2,
+      delay: 1.5,
+      ease: "power3.out",
+      onStart: () => {
+        heroAnimationTriggered = true; // Set the flag to true when animation starts
+      },
+    });
+  }
+});
+
 
 // Delay the entire animation for 1.5 seconds
 
