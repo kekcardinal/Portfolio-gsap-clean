@@ -1,5 +1,5 @@
- <!DOCTYPE html>
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -12,15 +12,15 @@
   <title>Portfolio | Félix Boutin-Cousineau</title>
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script src="assets/js/gsap-vignette.js" defer></script>
   <script src="assets/js/gsap-hero.js" defer></script>
   <script src="assets/js/gsap-loading.js" defer></script>
   <script src="assets/js/gsap-navbar.js" defer></script>
-  <script src="assets/js/heure.js"></script>
+  <!-- <script src="assets/js/heure.js"></script>
   <script src="assets/js/meteo.js"></script>
-  <script src="assets/js/langue.js"></script>
+  <script src="assets/js/langue.js"></script> -->
 </head>
 
 
@@ -28,59 +28,95 @@
 
 <body>
 
-<div class="loading-screen">
-  <div class="rectangle rect1"></div>
-  <div class="rectangle rect2"></div>
-  <div class="rectangle rect3"></div>
-  <div class="rectangle rect4"></div>
-</div>
+  <div class="loading-screen">
+    <div class="rectangle rect1"></div>
+    <div class="rectangle rect2"></div>
+    <div class="rectangle rect3"></div>
+    <div class="rectangle rect4"></div>
+  </div>
 
-<nav class="navbar"><div class="btn" id="startBtn">
-  <div class="bar"></div>
-  <div class="second_bar bar"></div>
-  <div class="bar"></div>
-</nav>
+  <nav class="navbar">
+    <div class="btn" id="startBtn">
+      <div class="bar"></div>
+      <div class="second_bar bar"></div>
+      <div class="bar"></div>
+  </nav>
 
-<ul  id="menuList" class="navbar-links">
-  <li class="choix "><div lang="en" class="choix_langue_en">English</div><div lang="en" class="choix_langue_fr">French</div><div lang="fr" class="choix_langue_en">Anglais</div><div lang="fr" class="choix_langue_fr">Français
-  </div></li>
-  <li><div class="navbar_numero">01</div><div lang="en" class="navbar_section">Home</div><div lang="fr" class="navbar_section">Accueil</div></li>
-  <li><div class="navbar_numero">02</div><div lang="en"class="navbar_section">About</div><div lang="fr" class="navbar_section">À propos</div></li>
-  <li><div class="navbar_numero">03</div><div lang="en"class="navbar_section">Skills</div><div lang="fr"class="navbar_section">Compétences</div></li>
-  <li><div class="navbar_numero">04</div><div lang="en"class="navbar_section">Projects</div><div lang="fr"class="navbar_section">Projet</div></li>
-  <li><div class="navbar_numero">05</div><div lang="en"class="navbar_section">Contact</div><div lang="fr"class="navbar_section">Contact</div></li>
-</ul>
-<main class="content">
-  <section class="section_hero">
-    <div class="conteneur_hero">
-      <img class="hero" src="assets/img/a3.jpg" alt="Hero Image"></img>
-      <div class="heure_meteo_disponibilite">
-        <p id="heure"></p>
-        <p class="temperature"></p>
-        <!-- <img class="icone_meteo" src="https://meteo.gc.ca/weathericons/01.gif"
+  <ul id="menuList" class="navbar-links">
+    <li class="choix ">
+      <div lang="en" class="choix_langue_en">English</div>
+      <div lang="en" class="choix_langue_fr">French</div>
+      <div lang="fr" class="choix_langue_en">Anglais</div>
+      <div lang="fr" class="choix_langue_fr">Français
+      </div>
+    </li>
+    <li>
+      <div class="navbar_numero">01</div>
+      <div lang="en" class="navbar_section">Home</div>
+      <div lang="fr" class="navbar_section">Accueil</div>
+    </li>
+    <li>
+      <div class="navbar_numero">02</div>
+      <div lang="en" class="navbar_section">About</div>
+      <div lang="fr" class="navbar_section">À propos</div>
+    </li>
+    <li>
+      <div class="navbar_numero">03</div>
+      <div lang="en" class="navbar_section">Skills</div>
+      <div lang="fr" class="navbar_section">Compétences</div>
+    </li>
+    <li>
+      <div class="navbar_numero">04</div>
+      <div lang="en" class="navbar_section">Projects</div>
+      <div lang="fr" class="navbar_section">Projet</div>
+    </li>
+    <li>
+      <div class="navbar_numero">05</div>
+      <div lang="en" class="navbar_section">Contact</div>
+      <div lang="fr" class="navbar_section">Contact</div>
+    </li>
+  </ul>
+  <main class="content">
+    <section class="section_hero">
+      <div class="conteneur_hero">
+        <img class="hero" src="assets/img/a3.jpg" alt="Hero Image"></img>
+        <div class="heure_meteo_disponibilite">
+          <p id="heure"></p>
+          <p class="temperature"></p>
+          <!-- <img class="icone_meteo" src="https://meteo.gc.ca/weathericons/01.gif"
           alt="icone meteo"> -->
-      </div>
-      <div class="disponibilite">
-        <p lang="fr">Disponible</p>
-        <p lang="en">Available</p>
-          <svg class="triangle_disponibilite" width="88" height="75" viewBox="0 0 88 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.02886 72.5L44 5L82.9711 72.5H5.02886Z" stroke="#00FF47" stroke-width="10"/>  
+        </div>
+        <div class="disponibilite">
+          <p lang="fr">Disponible</p>
+          <p lang="en">Available</p>
+          <svg class="triangle_disponibilite" width="88" height="75" viewBox="0 0 88 75" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.02886 72.5L44 5L82.9711 72.5H5.02886Z" stroke="#00FF47" stroke-width="10" />
           </svg>
+        </div>
+        <div class="hero_texte">
+          <p lang="fr">Félix Boutin-Cousineau</p>
+          <p lang="en">Felix Boutin-Cousineau</p>
+          <p lang="fr">Développeur Front-End</p>
+          <p lang="en">Front-End Developper</p>
+        </div>
       </div>
-      <div class="hero_texte">
-        <p lang="fr">Félix Boutin-Cousineau</p>
-        <p lang="en">Felix Boutin-Cousineau</p>
-        <p lang="fr">Développeur Front-End</p>
-        <p lang="en">Front-End Developper</p>
+    </section>
+    <section class="a_propos">
+      <div class="marquee-content section_titre" lang="en">About • About • About • About • About • About • About • About
+        • About • About • About • About • About • About • About • About • About • About • </div>
+      <div class="marquee-content section_titre" lang="fr">À propos • À propos • À propos • À propos • À propos • À
+        propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos</div>
+      <div lang="fr">
+        <h2>L'accessibilité</h2>
+        <p> est essentielle car elle garantit que mes projets sont accessibles à tous, favorisant ainsi l'inclusion en
+          ligne.</p>
       </div>
-    </div>
-  </section>
-  <section class="a_propos">
-    <div class="marquee-content section_titre" lang="en">About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About •     </div>
-    <div class="marquee-content section_titre" lang="fr">À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos • À propos</div>
-    <div lang="fr"><h2>L'accessibilité</h2><p> est essentielle car elle garantit que mes projets sont accessibles à tous, favorisant ainsi l'inclusion en ligne.</p></div>
-    <div lang="en"><h2>Accessibility</h2><p> is essential because it ensures that my projects are accessible to everyone, promoting online inclusion.</p></div>
-    <div id="bottom-bar-height">bottom bar height = </div>
-  </section>
-</main>
+      <div lang="en">
+        <h2>Accessibility</h2>
+        <p> is essential because it ensures that my projects are accessible to everyone, promoting online inclusion.</p>
+      </div>
+      <div id="bottom-bar-height">bottom bar height = </div>
+    </section>
+  </main>
 </body>
