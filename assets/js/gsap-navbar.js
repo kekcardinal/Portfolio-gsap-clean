@@ -23,21 +23,20 @@ function showNavbar() {
   gsap.to(".navbar", { y: "0%", duration: 0.5, ease: "power3.inOut" });
 }
 
-// Scroll event listener
-window.addEventListener("scroll", () => {
-  clearTimeout(scrollTimeout); // Clear any existing timeout
+// window.addEventListener("scroll", () => {
+//   clearTimeout(scrollTimeout);
 
-  if (!scrollTimeout) {
-    hideNavbar(); // Hide navbar on initial scroll
-  }
+//   if (!scrollTimeout) {
+//     hideNavbar();
+//   }
 
-  scrollTimeout = setTimeout(() => {
-    scrollTimeout = null;
-    hideNavbar(); // Hide navbar after inactivity
-  }, 2500); // Adjust the inactivity timeout (milliseconds)
+//   scrollTimeout = setTimeout(() => {
+//     scrollTimeout = null;
+//     hideNavbar();
+//   }, 2500);
 
-  showNavbar(); // Show navbar when scrolling starts
-});
+//   showNavbar();
+// });
 
 const startBtn = document.getElementById("startBtn");
 const menuList = document.getElementById("menuList");

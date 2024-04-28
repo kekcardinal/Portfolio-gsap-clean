@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 // Delay the entire animation for 1.5 seconds
 
 // Hide the text initially using display: none
