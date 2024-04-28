@@ -12,16 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if the animation has already been triggered before running it again
   if (!heroAnimationTriggered) {
-    gsap.to(".hero", {
-      scale: 1,
-      opacity: 1,
-      duration: 2,
-      delay: 1.5,
-      ease: "power3.out",
-      onStart: () => {
-        heroAnimationTriggered = true; // Set the flag to true when animation starts
-      },
-    });
+    // gsap.to(".hero", {
+    //   scale: 1,
+    //   opacity: 1,
+    //   duration: 2,
+    //   delay: 1.5,
+    //   ease: "power3.out",
+    //   onStart: () => {
+    //     heroAnimationTriggered = true; // Set the flag to true when animation starts
+    //   },
+    // });
   }
 
   // Delay the entire animation for 1.5 seconds
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Apply the GSAP animation
   gsap.to(".hero", {
     y: "100%", // Adjusted y value based on bottom bar height
-    ease: "none",
+    ease: "linear",
     scrollTrigger: {
       trigger: ".a_propos",
       scrub: true,
