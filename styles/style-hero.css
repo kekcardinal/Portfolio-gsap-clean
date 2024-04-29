@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   /* height: 100dvh; */
-  height: calc(100vh - 50px);
+  height: 100vh;
   object-fit: cover;
   filter: brightness(55%);
   position: relative;
@@ -96,7 +96,7 @@
   }
 
   .hero_texte {
-    padding-bottom: 75px;
+    padding-bottom: 125px;
     padding-right: 25px;
   }
 
