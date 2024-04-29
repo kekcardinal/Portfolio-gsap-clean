@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const bottomBarHeight = document.documentElement.clientHeight - currentHeight;
   
       // Update the content of the hero_texte div with bar heights
-      const heroTexteDiv = document.querySelector('.hero_texte');
+      const heroTexteDiv = document.querySelector('.test');
       if (heroTexteDiv) {
         heroTexteDiv.innerHTML = `
           <p>2Top Bar Height: ${topBarHeight}px</p>
