@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentHeight = window.innerHeight;
     const topBarHeight = Math.abs(previousHeight - currentHeight);
     const bottomBarHeight = Math.abs(
-      document.documentElement.clientHeight - currentHeight,
+      currentHeight - document.documentElement.clientHeight,
       0
     ); // Ensure the height is not negative
 
