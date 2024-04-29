@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Check if the user is on a mobile device
+  const height =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
 
-  // Calculate the height of the bottom browser bar
-  const bottomBarHeight = window.outerHeight - window.innerHeight;
+  const outerheight = window.outerHeight;
 
-  // Update the content of the hero_texte div with the bottom bar height
+  console.log("Height = ", height, ", Outer = ", outerheight);
+
   const heroTexteDiv = document.querySelector(".test");
   if (heroTexteDiv) {
-    heroTexteDiv.innerHTML = `<p>Bottom Bar Height: ${bottomBarHeight}px</p>`;
+    heroTexteDiv.innerHTML = `<p>Height: ${height}px, Outer:${outerheight}</p>`;
   }
 });
