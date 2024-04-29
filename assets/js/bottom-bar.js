@@ -12,4 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (heroTexteDiv) {
     heroTexteDiv.innerHTML = `<p>Height: ${height}px, Outer:${outerheight}</p>`;
   }
+
+  const scheight = screen.availHeight;
+
+  console.log("Screen Height = ", scheight);
+
+  const heroTexteDiv2 = document.querySelector(".test2");
+  if (heroTexteDiv2) {
+    heroTexteDiv2.innerHTML = `<p>Screen Height: ${scheight}px</p>`;
+  }
 });
