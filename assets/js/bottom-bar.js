@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (heroTexteDiv) {
         heroTexteDiv.innerHTML = `<p>Bottom Bar Height: ${bottomBarHeight}px</p>`;
       }
-    }, 500); // Adjust the timeout as needed for rendering delay
+    }, 2500); // Adjust the timeout as needed for rendering delay
   }
 });
