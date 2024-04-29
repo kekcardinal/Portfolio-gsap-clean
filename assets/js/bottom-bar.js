@@ -5,15 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateBarHeights() {
     const currentHeight = window.innerHeight;
     const topBarHeight = Math.abs(previousHeight - currentHeight);
-    const bottomBarHeight =
-      -currentHeight + document.documentElement.clientHeight;
+    const bottomBarHeight = Math.max(
+      document.documentElement.clientHeight - currentHeight,
+      0
+    ); // Ensure the height is not negative
 
     // Update the content of the hero_texte div with bar heights
     const heroTexteDiv = document.querySelector(".test");
     if (heroTexteDiv) {
       heroTexteDiv.innerHTML = `
-          <p>2Top Bar Height: ${topBarHeight}px</p>
-          <p>2Bottom Bar Height: ${bottomBarHeight}px</p>
+          <p>Top Bar Height: ${topBarHeight}px</p>
+          <p>Bottom Bar Height: ${bottomBarHeight}px</p>
         `;
     }
 
