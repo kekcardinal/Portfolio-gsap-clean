@@ -24,20 +24,20 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(".navbar", { y: "0%", duration: 0.5, ease: "power3.inOut" });
   }
 
-  // window.addEventListener("scroll", () => {
-  //   clearTimeout(scrollTimeout);
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
 
-  //   if (!scrollTimeout) {
-  //     hideNavbar();
-  //   }
+    if (!scrollTimeout) {
+      hideNavbar();
+    }
 
-  //   scrollTimeout = setTimeout(() => {
-  //     scrollTimeout = null;
-  //     hideNavbar();
-  //   }, 2500);
+    scrollTimeout = setTimeout(() => {
+      scrollTimeout = null;
+      hideNavbar();
+    }, 2500);
 
-  //   showNavbar();
-  // });
+    showNavbar();
+  });
 
   const startBtn = document.getElementById("startBtn");
   const menuList = document.getElementById("menuList");
