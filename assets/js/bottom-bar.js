@@ -1,19 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Calculate top and bottom bar heights
-  const totalScreenHeight = screen.availHeight;
-  const visibleWindowHeight = window.innerHeight;
-  const topBarHeight = totalScreenHeight - visibleWindowHeight;
-  const bottomBarHeight =
-    visibleWindowHeight - document.documentElement.clientHeight;
-
-  // Update the content of the hero_texte div with bar heights
-  const heroTexteDiv = document.querySelector(".test");
-  if (heroTexteDiv) {
-    heroTexteDiv.innerHTML = `
-            <p>Top Bar Height: ${topBarHeight}px</p>
-            <p>Bottom Bar Height: ${bottomBarHeight}px</p>
-          `;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    let previousHeight = window.innerHeight; // Initial window height
+  
+    // Function to update top and bottom bar heights
+    function updateBarHeights() {
+      const currentHeight = window.innerHeight;
+      const topBarHeight = Math.abs(previousHeight - currentHeight);
+      const bottomBarHeight = document.documentElement.clientHeight - currentHeight;
+  
+      // Update the content of the hero_texte div with bar heights
+      const heroTexteDiv = document.querySelector('.hero_texte');
+      if (heroTexteDiv) {
+        heroTexteDiv.innerHTML = `
+          <p>2Top Bar Height: ${topBarHeight}px</p>
+          <p>2Bottom Bar Height: ${bottomBarHeight}px</p>
+        `;
+      }
+  
+      previousHeight = currentHeight; // Update previous height
+    }
+  
+    // Initial update
+    updateBarHeights();
+  
+    // Listen for window resize events to update bar heights
+    window.addEventListener('resize', updateBarHeights);
+  });
+  
 
   //   const height =
   //     window.innerHeight ||
